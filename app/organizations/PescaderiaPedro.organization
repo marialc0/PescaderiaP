@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1" name="PescaderiaPedro">
+  <customUserInfoDefinitions/>
+  <users>
+    <user userName="maria.lacañina">
+      <firstName>Maria</firstName>
+      <lastName>Lacañina</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="carmen.malia">
+      <firstName>Carmen</firstName>
+      <lastName>Malia</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+  </users>
+  <roles>
+    <role name="cliente">
+      <displayName>Cliente</displayName>
+    </role>
+    <role name="empleado">
+      <displayName>Empleado</displayName>
+    </role>
+  </roles>
+  <groups>
+    <group name="pescaderia">
+      <displayName>Pescaderia</displayName>
+    </group>
+    <group name="jefe" parentPath="/pescaderia">
+      <displayName>Jefe</displayName>
+    </group>
+    <group name="trabajadores" parentPath="/pescaderia">
+      <displayName>Trabajadores</displayName>
+    </group>
+    <group name="clientes" parentPath="/pescaderia">
+      <displayName>Clientes</displayName>
+    </group>
+  </groups>
+  <memberships>
+    <membership>
+      <userName>maria.lacañina</userName>
+      <roleName>cliente</roleName>
+      <groupName>pescaderia</groupName>
+    </membership>
+    <membership>
+      <userName>carmen.malia</userName>
+      <roleName>empleado</roleName>
+      <groupName>trabajadores</groupName>
+      <groupParentPath>/pescaderia</groupParentPath>
+    </membership>
+  </memberships>
+</organization:Organization>
